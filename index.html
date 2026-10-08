@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>شهید دکتر مجید تجن‌جاری | یک نخبه، یک استاد، یک میراث</title>
   <link rel="stylesheet" href="style.css">
+
+<style>
+.credit-slide{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 45%,rgba(98,255,176,.12),transparent 28%),linear-gradient(135deg,#030806,#07130f 55%,#020504)!important;display:flex;align-items:center;justify-content:center;text-align:center;}
+.credit-slide:before{content:"";position:absolute;inset:-30%;background:repeating-conic-gradient(from 0deg,rgba(98,255,176,.035) 0 1deg,transparent 1deg 9deg);animation:creditSpin 24s linear infinite;}
+.credit-slide:after{content:"";position:absolute;inset:0;background:radial-gradient(circle,transparent 25%,rgba(0,0,0,.7) 100%);pointer-events:none;}
+.credit-content{position:relative;z-index:2;width:min(900px,90%);}
+.credit-kicker{font-size:.82rem;letter-spacing:.35em;color:#9ff0c5;text-transform:uppercase;opacity:.9;}
+.credit-title{margin:18px 0 8px;font-size:clamp(2.3rem,6vw,5.8rem);line-height:1.05;font-weight:900;}
+.credit-title span{display:block;background:linear-gradient(90deg,#fff,#9ff0c5,#fff);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200%;animation:creditShine 4s linear infinite;}
+.credit-sub{color:#aabdb5;font-size:clamp(.95rem,1.6vw,1.2rem);margin:18px auto 38px;max-width:650px;line-height:2;}
+.credit-cards{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;}
+.credit-card{min-width:220px;padding:22px 30px;border:1px solid rgba(159,240,197,.2);border-radius:22px;background:rgba(255,255,255,.035);backdrop-filter:blur(12px);box-shadow:0 0 40px rgba(98,255,176,.05);}
+.credit-card small{display:block;color:#7d978c;font-size:.75rem;margin-bottom:8px}.credit-card strong{font-size:1.35rem;color:#fff}.credit-topic{margin-top:28px;color:#9ff0c5;font-size:.9rem;letter-spacing:.12em}
+.credit-line{width:180px;height:1px;margin:32px auto;background:linear-gradient(90deg,transparent,#62ffb0,transparent);box-shadow:0 0 16px #62ffb0;}
+.credit-heart{display:inline-block;color:#62ffb0;animation:heartPulse 1.8s ease-in-out infinite;}
+@keyframes creditSpin{to{transform:rotate(360deg)}}
+@keyframes creditShine{to{background-position:200% center}}
+@keyframes heartPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.18);text-shadow:0 0 22px #62ffb0}}
+</style>
 </head>
 <body>
   <div class="progress"><span id="progressBar"></span></div>
@@ -160,11 +179,24 @@
         <div class="end">پایان ارائه • با احترام و یاد نیک</div>
       </div>
     </section>
+    <section class="slide credit-slide">
+      <div class="credit-content">
+        <div class="credit-kicker">پایان پژوهش • با احترام به یک استاد ماندگار</div>
+        <h2 class="credit-title">به یاد <span>استاد مجید تجن‌جاری</span></h2>
+        <p class="credit-sub">این ارائه با هدف شناختن مسیر علمی، اختراعات، آموزش و میراث فکری استادی ساخته شد که نامش برای من فقط یک نام نیست.</p>
+        <div class="credit-line"></div>
+        <div class="credit-cards">
+          <div class="credit-card"><small>پژوهش و ارائه</small><strong>پارسا نیک‌زاد</strong></div>
+          <div class="credit-card"><small>استاد</small><strong>آقای نوع‌پرور</strong></div>
+        </div>
+        <div class="credit-topic">موضوع: شهید دکتر مجید تجن‌جاری <span class="credit-heart">♥</span></div>
+      </div>
+    </section>
   </main>
 
   <div class="controls">
     <button id="prev" aria-label="اسلاید قبلی">→</button>
-    <span id="counter">۱ / ۹</span>
+    <span id="counter">۱ / ۱۰</span>
     <button id="next" aria-label="اسلاید بعدی">←</button>
   </div>
   <div class="hint">← → برای جابه‌جایی • Space برای اسلاید بعدی • روی کارت ویدئو کلیک کن</div>
